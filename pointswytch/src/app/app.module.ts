@@ -28,9 +28,13 @@ import { SpinnerComponent } from './shared/spinner.component';
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
-import { ProductsComponent } from './products/products.component';
-import { AddProductComponent } from './add-product/add-product.component';
 
+import { JwtModule } from '@auth0/angular-jwt';
+
+
+export function tokenGetter() {
+  return localStorage.getItem('token');
+}
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true,
   wheelSpeed: 1,
@@ -46,9 +50,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     BlankComponent,
     NavigationComponent,
     BreadcrumbComponent,
-    SidebarComponent,
-    ProductsComponent,
-    AddProductComponent
+    SidebarComponent
   ],
   imports: [
     CommonModule,
@@ -59,6 +61,14 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     DataTablesModule,
     HttpClientModule,
     NgbModule,
+    HttpClientModule,
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: tokenGetter,
+        whitelistedDomains: ['localhost:3002'],
+        blacklistedRoutes: ['example.com/examplebadroute/']
+      }
+    }),
     RouterModule.forRoot(Approutes),
     PerfectScrollbarModule,
     NgMultiSelectDropDownModule.forRoot(),

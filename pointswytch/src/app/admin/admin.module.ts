@@ -10,11 +10,7 @@ import { AddChannelComponent } from './channel/add-channel/add-channel.component
 import { EditChannelComponent } from './channel/edit-channel/edit-channel.component';
 import { DeleteChannelComponent } from './channel/delete-channel/delete-channel.component';
 import { ChannelsComponent } from './channel/channels/channels.component';
-import { TelcoComponent } from './telco/telco.component';
-import { ProcessorComponent } from './processor/processor.component';
-import { ProductComponent } from './product/product.component';
-import { RoleComponent } from './role/role.component';
-import { PermissionComponent } from './permission/permission.component';
+
 import { PermissionsComponent } from './permission/permissions/permissions.component';
 import { AddPermissionComponent } from './permission/add-permission/add-permission.component';
 import { EditPermissionComponent } from './permission/edit-permission/edit-permission.component';
@@ -37,11 +33,7 @@ import { DeleteProcessorComponent } from './psp/delete-processor/delete-processo
     ChannelsComponent,
     EditChannelComponent,
     DeleteChannelComponent,
-    TelcoComponent,
-    ProcessorComponent,
-    ProductComponent,
-    RoleComponent,
-    PermissionComponent,
+
     PermissionsComponent,
     AddPermissionComponent,
     EditPermissionComponent,

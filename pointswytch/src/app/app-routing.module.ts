@@ -4,6 +4,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { FullComponent } from './layouts/full/full.component';
 import { BlankComponent } from './layouts/blank/blank.component';
 
+import { AuthGuardService as AuthGuard} from './authentication/auth-guard.service';
+
 export const Approutes: Routes = [
   {
     path: '',
