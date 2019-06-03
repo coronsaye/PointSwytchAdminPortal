@@ -9,12 +9,70 @@ import { AddPermissionComponent } from './permission/add-permission/add-permissi
 import { PermissionsComponent } from './permission/permissions/permissions.component';
 import { EditPermissionComponent } from './permission/edit-permission/edit-permission.component';
 import { DeletePermissionComponent } from './permission/delete-permission/delete-permission.component';
+import { ListUsersComponent } from './user/list-users/list-users.component';
+import { AddUserComponent } from './user/add-user/add-user.component';
+import { EditUserComponent } from './user/edit-user/edit-user.component';
 
 export const AdminRoutes: Routes = [
 
     {
       path: '',
       children: [
+        {
+          path: 'list-users',
+          component: ListUsersComponent,
+          data: {
+            title: 'Users',
+            urls: [
+              { title: 'Dashboard', url: '/dashboard' },
+              { title: 'Users' }
+            ]
+          }
+        },
+        {
+          path: 'add-user',
+          component: AddUserComponent,
+          data: {
+            title: 'Add User',
+            urls: [
+              { title: 'Dashboard', url: '/dashboard' },
+              { title: 'Add User' }
+            ]
+          }
+        },
+        {
+          path: 'edit-user',
+          component: EditUserComponent,
+          data: {
+            title: 'Edit User',
+            urls: [
+              { title: 'Dashboard', url: '/dashboard' },
+              { title: 'Edit User' }
+            ]
+          }
+        },
+        {
+          path: 'select-user',
+          component: BankListComponent,
+          data: {
+            title: 'Select User',
+            urls: [
+              { title: 'Dashboard', url: '/dashboard' },
+              { title: 'Select User' }
+            ]
+          }
+        },
+        {
+          path: 'delete-user',
+          component: BankListComponent,
+          data: {
+            title: 'Delete User',
+            urls: [
+              { title: 'Dashboard', url: '/dashboard' },
+              { title: 'Delete User' }
+            ]
+          }
+        },
         {
           path: 'bank-list',
           component: BankListComponent,

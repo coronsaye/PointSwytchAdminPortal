@@ -65,8 +65,10 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     JwtModule.forRoot({
       config: {
         tokenGetter: tokenGetter,
-        whitelistedDomains: ['localhost:3002'],
-        blacklistedRoutes: ['example.com/examplebadroute/']
+        whitelistedDomains: ['localhost:4200', 'localhost:3000'],
+        blacklistedRoutes: [],
+        throwNoTokenError: true,
+        skipWhenExpired: true
       }
     }),
     RouterModule.forRoot(Approutes),

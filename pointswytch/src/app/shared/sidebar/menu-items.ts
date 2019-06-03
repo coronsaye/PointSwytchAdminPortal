@@ -40,7 +40,7 @@ export const ROUTES: RouteInfo[] = [
   {
     path: '',
     title: 'Channels',
-    icon: 'mdi mdi-bank',
+    icon: 'mdi mdi-routes',
     class: 'has-arrow',
     extralink: false,
     submenu: [
@@ -65,7 +65,7 @@ export const ROUTES: RouteInfo[] = [
   {
     path: '',
     title: 'Products',
-    icon: 'mdi mdi-bank',
+    icon: 'mdi mdi-relative-scale',
     class: 'has-arrow',
     extralink: false,
     submenu: [
@@ -118,7 +118,7 @@ export const ROUTES: RouteInfo[] = [
   {
     path: '',
     title: 'Processors',
-    icon: 'mdi mdi-credit-card-multiple',
+    icon: 'mdi mdi-switch',
     class: 'has-arrow',
     extralink: false,
     submenu: [
@@ -248,22 +248,22 @@ export const ROUTES: RouteInfo[] = [
   {
     path: '',
     title: 'Merchants',
-    icon: 'mdi mdi-widgets',
+    icon: 'icon icon-list',
     class: 'has-arrow',
     extralink: false,
     submenu: [
       {
-        path: '/component/accordion',
-        title: 'Accordion',
-        icon: 'mdi mdi-equal',
+        path: '/acquiring/new-merchant',
+        title: 'New Merchant',
+        icon: 'icon icon-plus',
         class: '',
         extralink: false,
         submenu: []
       },
       {
-        path: '/component/alert',
-        title: 'Alert',
-        icon: 'mdi mdi-message-bulleted',
+        path: '/acquiring/list-merchants',
+        title: 'Merchant Listing',
+        icon: 'icon icon-list',
         class: '',
         extralink: false,
         submenu: []
@@ -274,30 +274,22 @@ export const ROUTES: RouteInfo[] = [
   {
     path: '',
     title: 'Terminals',
-    icon: 'mdi mdi-credit-card-multiple',
+    icon: 'mdi mdi-server-network',
     class: 'has-arrow',
     extralink: false,
     submenu: [
       {
-        path: '/cards/basiccards',
-        title: 'Basic Cards',
-        icon: 'mdi mdi-layers',
+        path: '/acquiring/list-terminals',
+        title: 'List Terminals',
+        icon: 'icon icon-list',
         class: '',
         extralink: false,
         submenu: []
       },
       {
-        path: '/cards/customcards',
-        title: 'Custom Cards',
-        icon: 'mdi mdi-credit-card-scan',
-        class: '',
-        extralink: false,
-        submenu: []
-      },
-      {
-        path: '/cards/weathercards',
-        title: 'Weather Cards',
-        icon: 'mdi mdi-weather-fog',
+        path: '/acquiring/add-terminal',
+        title: 'Add Terminal',
+        icon: 'icon icon-plus',
         class: '',
         extralink: false,
         submenu: []
@@ -307,22 +299,22 @@ export const ROUTES: RouteInfo[] = [
   {
     path: '',
     title: 'Fees',
-    icon: 'mdi mdi-cube-send',
+    icon: 'mdi mdi-cash-multiple',
     class: 'has-arrow',
     extralink: false,
     submenu: [
       {
-        path: '/extra-component/toastr',
-        title: 'Toastr',
-        icon: 'mdi mdi-poll',
+        path: '/acquiring/fee-setups',
+        title: 'Fee Setup',
+        icon: 'icon icon-list',
         class: '',
         extralink: false,
         submenu: []
       },
       {
-        path: '/extra-component/upload',
-        title: 'File Upload',
-        icon: 'mdi mdi-arrow-up-box',
+        path: '/acquiring/setup-fee',
+        title: 'Setup Fee',
+        icon: 'icon icon-plus',
         class: '',
         extralink: false,
         submenu: []
@@ -332,22 +324,22 @@ export const ROUTES: RouteInfo[] = [
   {
     path: '',
     title: 'Fee Sharing',
-    icon: 'mdi mdi-chemical-weapon',
+    icon: 'mdi mdi-cash-100',
     class: 'has-arrow',
     extralink: false,
     submenu: [
       {
-        path: '/widgets/apps',
-        title: 'Widget Apps',
-        icon: 'mdi mdi-comment-processing-outline',
+        path: '/acquiring/fee-share',
+        title: 'List Fee Share',
+        icon: 'icon icon-list',
         class: '',
         extralink: false,
         submenu: []
       },
       {
-        path: '/widgets/data',
-        title: 'Widget Data',
-        icon: 'mdi mdi-calendar',
+        path: '/acquiring/new-fee-share',
+        title: 'New Fee Share',
+        icon: 'icon icon-plus',
         class: '',
         extralink: false,
         submenu: []
@@ -357,21 +349,21 @@ export const ROUTES: RouteInfo[] = [
   ,
   {
     path: '',
-    title: 'Payments',
-    icon: 'mdi mdi-chemical-weapon',
+    title: 'Transactions',
+    icon: 'mdi mdi-wallet',
     class: 'has-arrow',
     extralink: false,
     submenu: [
       {
-        path: '/widgets/apps',
-        title: 'Transactions',
-        icon: 'mdi mdi-comment-processing-outline',
+        path: '/transaction/payments',
+        title: 'Payments',
+        icon: 'mdi mdi-credit-card-multiple',
         class: '',
         extralink: false,
         submenu: []
       },
       {
-        path: '/widgets/data',
+        path: '/transaction/commissions',
         title: 'Commissions',
         icon: 'mdi mdi-calendar',
         class: '',

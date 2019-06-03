@@ -22,6 +22,12 @@ import { AddProcessorComponent } from './psp/add-processor/add-processor.compone
 import { EditProcessorComponent } from './psp/edit-processor/edit-processor.component';
 import { DeleteProcessorComponent } from './psp/delete-processor/delete-processor.component';
 
+import { ListUsersComponent } from './user/list-users/list-users.component';
+import { AddUserComponent } from './user/add-user/add-user.component';
+import { SelectUserComponent } from './user/select-user/select-user.component';
+import { EditUserComponent } from './user/edit-user/edit-user.component';
+import { DeleteUserComponent } from './user/delete-user/delete-user.component';
+
 
 @NgModule({
   declarations: [
@@ -44,6 +50,11 @@ import { DeleteProcessorComponent } from './psp/delete-processor/delete-processo
     AddProcessorComponent,
     EditProcessorComponent,
     DeleteProcessorComponent,
+    ListUsersComponent,
+    AddUserComponent,
+    SelectUserComponent,
+    EditUserComponent,
+    DeleteUserComponent,
   ],
   imports: [
     CommonModule,
