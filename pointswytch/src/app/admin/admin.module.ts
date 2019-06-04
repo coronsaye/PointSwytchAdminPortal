@@ -27,6 +27,9 @@ import { AddUserComponent } from './user/add-user/add-user.component';
 import { SelectUserComponent } from './user/select-user/select-user.component';
 import { EditUserComponent } from './user/edit-user/edit-user.component';
 import { DeleteUserComponent } from './user/delete-user/delete-user.component';
+import { ProductsComponent } from './product/products/products.component';
+import { AddProductComponent } from './product/add-product/add-product.component';
+
 
 
 @NgModule({
@@ -39,7 +42,6 @@ import { DeleteUserComponent } from './user/delete-user/delete-user.component';
     ChannelsComponent,
     EditChannelComponent,
     DeleteChannelComponent,
-
     PermissionsComponent,
     AddPermissionComponent,
     EditPermissionComponent,
@@ -55,6 +57,8 @@ import { DeleteUserComponent } from './user/delete-user/delete-user.component';
     SelectUserComponent,
     EditUserComponent,
     DeleteUserComponent,
+    ProductsComponent,
+    AddProductComponent,
   ],
   imports: [
     CommonModule,
