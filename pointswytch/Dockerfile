@@ -1,14 +1,28 @@
-# Stage 0, "build-stage", based on Node.js, to build and compile the frontend
-FROM tiangolo/node-frontend:10 as build-stage
-WORKDIR /app
-COPY package*.json /app/
-RUN npm install
-COPY ./ /app/
-ARG configuration=production
-RUN npm run build -- --output-path=./dist/out --configuration $configuration
+### STAGE 1: Build ###
+FROM node:8.11.1-alpine as builder
+# Preparing working environment.
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
 
-# Stage 1, based on Nginx, to have only the compiled app, ready for production with Nginx
-FROM nginx:1.15
-COPY --from=build-stage /app/dist/out/ /usr/share/nginx/html
-# Copy the default nginx.conf provided by tiangolo/node-frontend
-COPY --from=build-stage /nginx.conf /etc/nginx/conf.d/default.conf
+# Installing dependencies.
+COPY package*.json /usr/src/app/
+RUN npm install
+# Copy app source into image.
+COPY . /usr/src/app
+# Building app.
+RUN npm run-script build
+
+
+### STAGE 2: Setup ###
+FROM nginx:1.13.12-alpine
+# Removing nginx default page.
+RUN rm -rf /usr/share/nginx/html/*
+# Copying nginx configuration.
+COPY /nginx/default.conf /etc/nginx/conf.d/default.conf
+
+# Copying openhome-panel source into web server root.
+COPY --from=builder /usr/src/app/dist /usr/share/nginx/html
+# Exposing ports.
+EXPOSE 80
+# Starting server.
+CMD ["nginx", "-g", "daemon off;"]

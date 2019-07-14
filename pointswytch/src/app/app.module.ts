@@ -30,10 +30,13 @@ import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 
 import { JwtModule } from '@auth0/angular-jwt';
+import { AuthService } from './authentication/auth.service';
+import { AuthGuardService } from './authentication/auth-guard.service';
+import { LoginService } from './authentication/login2/login.service';
 
 
 export function tokenGetter() {
-  return localStorage.getItem('token');
+  return localStorage.getItem('access_token');
 }
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true,
@@ -80,7 +83,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     {
       provide: PERFECT_SCROLLBAR_CONFIG,
       useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG
-    }
+    }, AuthService, AuthGuardService, LoginService
   ],
   bootstrap: [AppComponent]
 })
