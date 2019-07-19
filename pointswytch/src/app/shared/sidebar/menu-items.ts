@@ -4,241 +4,6 @@ export const ROUTES: RouteInfo[] = [
 
   {
     path: '',
-    title: 'ADMIN',
-    icon: 'mdi mdi-dots-horizontal',
-    class: 'nav-small-cap',
-    extralink: true,
-    submenu: []
-  }
-  ,
-  {
-    path: '',
-    title: 'Banks',
-    icon: 'mdi mdi-bank',
-    class: 'has-arrow',
-    extralink: false,
-    submenu: [
-      {
-        path: '/admin/bank-list',
-        title: 'Manage Banks',
-        icon: 'icon icon-list',
-        class: '',
-        extralink: false,
-        submenu: []
-      },
-      {
-        path: '/admin/add-bank',
-        title: 'Add Bank',
-        icon: 'icon icon-plus',
-        class: '',
-        extralink: false,
-        submenu: []
-      }
-    ]
-  }
-  ,
-  {
-    path: '',
-    title: 'Channels',
-    icon: 'mdi mdi-routes',
-    class: 'has-arrow',
-    extralink: false,
-    submenu: [
-      {
-        path: '/admin/channels',
-        title: 'Payment Channels',
-        icon: 'icon icon-list',
-        class: '',
-        extralink: false,
-        submenu: []
-      },
-      {
-        path: '/admin/add-channel',
-        title: 'Add Channel',
-        icon: 'icon icon-plus',
-        class: '',
-        extralink: false,
-        submenu: []
-      }
-    ]
-  },
-  {
-    path: '',
-    title: 'Products',
-    icon: 'mdi mdi-relative-scale',
-    class: 'has-arrow',
-    extralink: false,
-    submenu: [
-      {
-        path: '/admin/products',
-        title: 'Manage Products',
-        icon: 'icon icon-list',
-        class: '',
-        extralink: false,
-        submenu: []
-      },
-      {
-        path: '/admin/add-product',
-        title: 'Add Product',
-        icon: 'icon icon-plus',
-        class: '',
-        extralink: false,
-        submenu: []
-      }
-    ]
-  }
-
-  ,
-  {
-    path: '',
-    title: 'Telcos',
-    icon: 'mdi mdi-access-point-network',
-    class: 'has-arrow',
-    extralink: false,
-    submenu: [
-      {
-        path: '/admin/telcos',
-        title: 'Manage Telcos',
-        icon: 'icon icon-list',
-        class: '',
-        extralink: false,
-        submenu: []
-      },
-      {
-        path: '/admin/add-telco',
-        title: 'Add New',
-        icon: 'icon icon-plus',
-        class: '',
-        extralink: false,
-        submenu: []
-      }
-    ]
-  }
-  ,
-  {
-    path: '',
-    title: 'Processors',
-    icon: 'mdi mdi-switch',
-    class: 'has-arrow',
-    extralink: false,
-    submenu: [
-      {
-        path: '/admin/processors',
-        title: 'Manage Processors',
-        icon: 'icon icon-list',
-        class: '',
-        extralink: false,
-        submenu: []
-      },
-      {
-        path: '/admin/add-processor',
-        title: 'Add New',
-        icon: 'icon icon-plus',
-        class: '',
-        extralink: false,
-        submenu: []
-      }
-    ]
-  }
-  ,
-  {
-    path: '',
-    title: 'Roles',
-    icon: 'icon icon-layers',
-    class: 'has-arrow',
-    extralink: false,
-    submenu: [
-      {
-        path: '/admin/roles',
-        title: 'Manage Roles',
-        icon: 'icon icon-list',
-        class: '',
-        extralink: false,
-        submenu: []
-      },
-      {
-        path: '/admin/add-role',
-        title: 'Add Role',
-        icon: 'icon icon-plus',
-        class: '',
-        extralink: false,
-        submenu: []
-      }
-    ]
-  }
-  ,
-  {
-    path: '',
-    title: 'Permissions',
-    icon: 'icon icon-menu',
-    class: 'has-arrow',
-    extralink: false,
-    submenu: [
-      {
-        path: '/admin/permissions',
-        title: 'Manage Permissions',
-        icon: 'icon icon-list',
-        class: '',
-        extralink: false,
-        submenu: []
-      },
-      {
-        path: '/admin/add-permission',
-        title: 'Add Permission',
-        icon: 'icon icon-plus',
-        class: '',
-        extralink: false,
-        submenu: []
-      }
-      ,
-      {
-        path: '/admin/edit-permission',
-        title: 'Edit Permission',
-        icon: 'icon icon-plus',
-        class: '',
-        extralink: false,
-        submenu: []
-      }
-      ,
-      {
-        path: '/admin/add-permission',
-        title: 'Delete Permission',
-        icon: 'icon icon-plus',
-        class: '',
-        extralink: false,
-        submenu: []
-      }
-    ]
-  }
-  ,
-  {
-    path: '',
-    title: 'Users',
-    icon: 'icon icon-people',
-    class: 'has-arrow',
-    extralink: false,
-    submenu: [
-      {
-        path: '/admin/list-users',
-        title: 'Manage Users',
-        icon: 'icon icon-list',
-        class: '',
-        extralink: false,
-        submenu: []
-      },
-      {
-        path: '/admin/add-user',
-        title: 'Add User',
-        icon: 'icon icon-plus',
-        class: '',
-        extralink: false,
-        submenu: []
-      }
-    ]
-  },
-
-  {
-    path: '',
     title: 'ACQUIRING',
     icon: 'mdi mdi-dots-horizontal',
     class: 'nav-small-cap',
@@ -692,6 +457,241 @@ export const ROUTES: RouteInfo[] = [
       }
     ]
   }
+  ,{
+    path: '',
+    title: 'ADMIN',
+    icon: 'mdi mdi-dots-horizontal',
+    class: 'nav-small-cap',
+    extralink: true,
+    submenu: []
+  }
+  ,
+  {
+    path: '',
+    title: 'Banks',
+    icon: 'mdi mdi-bank',
+    class: 'has-arrow',
+    extralink: false,
+    submenu: [
+      {
+        path: '/admin/bank-list',
+        title: 'Manage Banks',
+        icon: 'icon icon-list',
+        class: '',
+        extralink: false,
+        submenu: []
+      },
+      {
+        path: '/admin/add-bank',
+        title: 'Add Bank',
+        icon: 'icon icon-plus',
+        class: '',
+        extralink: false,
+        submenu: []
+      }
+    ]
+  }
+  ,
+  {
+    path: '',
+    title: 'Channels',
+    icon: 'mdi mdi-routes',
+    class: 'has-arrow',
+    extralink: false,
+    submenu: [
+      {
+        path: '/admin/channels',
+        title: 'Payment Channels',
+        icon: 'icon icon-list',
+        class: '',
+        extralink: false,
+        submenu: []
+      },
+      {
+        path: '/admin/add-channel',
+        title: 'Add Channel',
+        icon: 'icon icon-plus',
+        class: '',
+        extralink: false,
+        submenu: []
+      }
+    ]
+  },
+  {
+    path: '',
+    title: 'Products',
+    icon: 'mdi mdi-relative-scale',
+    class: 'has-arrow',
+    extralink: false,
+    submenu: [
+      {
+        path: '/admin/products',
+        title: 'Manage Products',
+        icon: 'icon icon-list',
+        class: '',
+        extralink: false,
+        submenu: []
+      },
+      {
+        path: '/admin/add-product',
+        title: 'Add Product',
+        icon: 'icon icon-plus',
+        class: '',
+        extralink: false,
+        submenu: []
+      }
+    ]
+  }
+
+  ,
+  {
+    path: '',
+    title: 'Telcos',
+    icon: 'mdi mdi-access-point-network',
+    class: 'has-arrow',
+    extralink: false,
+    submenu: [
+      {
+        path: '/admin/telcos',
+        title: 'Manage Telcos',
+        icon: 'icon icon-list',
+        class: '',
+        extralink: false,
+        submenu: []
+      },
+      {
+        path: '/admin/add-telco',
+        title: 'Add New',
+        icon: 'icon icon-plus',
+        class: '',
+        extralink: false,
+        submenu: []
+      }
+    ]
+  }
+  ,
+  {
+    path: '',
+    title: 'Processors',
+    icon: 'mdi mdi-switch',
+    class: 'has-arrow',
+    extralink: false,
+    submenu: [
+      {
+        path: '/admin/processors',
+        title: 'Manage Processors',
+        icon: 'icon icon-list',
+        class: '',
+        extralink: false,
+        submenu: []
+      },
+      {
+        path: '/admin/add-processor',
+        title: 'Add New',
+        icon: 'icon icon-plus',
+        class: '',
+        extralink: false,
+        submenu: []
+      }
+    ]
+  }
+  ,
+  {
+    path: '',
+    title: 'Roles',
+    icon: 'icon icon-layers',
+    class: 'has-arrow',
+    extralink: false,
+    submenu: [
+      {
+        path: '/admin/roles',
+        title: 'Manage Roles',
+        icon: 'icon icon-list',
+        class: '',
+        extralink: false,
+        submenu: []
+      },
+      {
+        path: '/admin/add-role',
+        title: 'Add Role',
+        icon: 'icon icon-plus',
+        class: '',
+        extralink: false,
+        submenu: []
+      }
+    ]
+  }
+  ,
+  {
+    path: '',
+    title: 'Permissions',
+    icon: 'icon icon-menu',
+    class: 'has-arrow',
+    extralink: false,
+    submenu: [
+      {
+        path: '/admin/permissions',
+        title: 'Manage Permissions',
+        icon: 'icon icon-list',
+        class: '',
+        extralink: false,
+        submenu: []
+      },
+      {
+        path: '/admin/add-permission',
+        title: 'Add Permission',
+        icon: 'icon icon-plus',
+        class: '',
+        extralink: false,
+        submenu: []
+      }
+      ,
+      {
+        path: '/admin/edit-permission',
+        title: 'Edit Permission',
+        icon: 'icon icon-plus',
+        class: '',
+        extralink: false,
+        submenu: []
+      }
+      ,
+      {
+        path: '/admin/add-permission',
+        title: 'Delete Permission',
+        icon: 'icon icon-plus',
+        class: '',
+        extralink: false,
+        submenu: []
+      }
+    ]
+  }
+  ,
+  {
+    path: '',
+    title: 'Users',
+    icon: 'icon icon-people',
+    class: 'has-arrow',
+    extralink: false,
+    submenu: [
+      {
+        path: '/admin/list-users',
+        title: 'Manage Users',
+        icon: 'icon icon-list',
+        class: '',
+        extralink: false,
+        submenu: []
+      },
+      {
+        path: '/admin/add-user',
+        title: 'Add User',
+        icon: 'icon icon-plus',
+        class: '',
+        extralink: false,
+        submenu: []
+      }
+    ]
+  },
+
   ,
   {
     path: '',

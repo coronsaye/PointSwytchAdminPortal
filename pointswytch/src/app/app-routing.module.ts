@@ -29,7 +29,7 @@ export const Approutes: Routes = [
       },
       {
         path: '',
-        redirectTo: '/dashboard/classic',
+        redirectTo: '/dashboard/admin',
         pathMatch: 'full'
 
       }
@@ -38,9 +38,9 @@ export const Approutes: Routes = [
   {
     path: '',
     component: FullComponent,
-    canActivate: [AuthGuard],
+    // canActivate: [AuthGuard],
     children: [
-      { path: '', redirectTo: '/dashboard/classic', pathMatch: 'full' },
+      { path: '', redirectTo: '/dashboard/admin', pathMatch: 'full' },
 
 
       {
