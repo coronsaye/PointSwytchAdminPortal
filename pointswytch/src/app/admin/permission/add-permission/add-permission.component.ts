@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddPermissionComponent implements OnInit {
 
+  title = 'Create Permission';
+  permission = { name: '' };
   constructor() { }
 
   ngOnInit() {

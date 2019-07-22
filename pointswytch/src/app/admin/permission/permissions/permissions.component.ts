@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Permission } from 'src/app/models/permission';
 
 @Component({
   selector: 'app-permissions',
@@ -7,9 +8,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PermissionsComponent implements OnInit {
 
+  permissions: Permission[];
+  title: String;
+  fault: String;
+
   constructor() { }
 
   ngOnInit() {
+
+    this.title = 'Permissions';
+    this.show();
+  }
+
+
+
+  show(): void {
+
+  }
+
+
+  delete(permission: Permission): void {
+
+
+
   }
 
 }

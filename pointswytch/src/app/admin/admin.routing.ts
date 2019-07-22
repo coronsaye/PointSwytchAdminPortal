@@ -12,6 +12,8 @@ import { DeletePermissionComponent } from './permission/delete-permission/delete
 import { ListUsersComponent } from './user/list-users/list-users.component';
 import { AddUserComponent } from './user/add-user/add-user.component';
 import { EditUserComponent } from './user/edit-user/edit-user.component';
+import { RolesComponent } from './user-role/roles/roles.component';
+import { AddRoleComponent } from './user-role/add-role/add-role.component';
 
 export const AdminRoutes: Routes = [
 
@@ -72,7 +74,32 @@ export const AdminRoutes: Routes = [
               { title: 'Delete User' }
             ]
           }
-        },
+        }
+        ,
+        {
+          path: 'roles',
+          component: RolesComponent,
+          data: {
+            title: 'User Roles',
+            urls: [
+              { title: 'Dashboard', url: '/dashboard' },
+              { title: 'User Roles' }
+            ]
+          }
+        }
+        ,
+        {
+          path: 'add-role',
+          component: AddRoleComponent,
+          data: {
+            title: 'Create Role',
+            urls: [
+              { title: 'Dashboard', url: '/dashboard' },
+              { title: 'Create Role' }
+            ]
+          }
+        }
+        ,
         {
           path: 'bank-list',
           component: BankListComponent,
@@ -190,4 +217,4 @@ export const AdminRoutes: Routes = [
       ]
 
     }
-]
+];

@@ -30,6 +30,8 @@ import { EditUserComponent } from './user/edit-user/edit-user.component';
 import { DeleteUserComponent } from './user/delete-user/delete-user.component';
 import { ProductsComponent } from './product/products/products.component';
 import { AddProductComponent } from './product/add-product/add-product.component';
+import { RolesComponent } from './user-role/roles/roles.component';
+import { AddRoleComponent } from './user-role/add-role/add-role.component';
 
 
 
@@ -60,9 +62,12 @@ import { AddProductComponent } from './product/add-product/add-product.component
     DeleteUserComponent,
     ProductsComponent,
     AddProductComponent,
+    RolesComponent,
+    AddRoleComponent,
   ],
   imports: [
     CommonModule,
+    FormsModule,
     RouterModule.forChild(AdminRoutes),
   ]
 })

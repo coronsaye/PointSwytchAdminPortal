@@ -1,4 +1,3 @@
-
 <div class="animated fadeIn">
 
 
@@ -12,24 +11,17 @@
               <thead>
                 <tr>
                   <th>SNo.</th>
-                  <th>First Name</th>
-                  <th>Last Name</th>
-                  <th>Email Address</th>
-                  <th>Phone Number</th>
+                  <th>Role Name</th>
                   <th></th>
                   
                 </tr>
               </thead>
               <tbody>
   
-                <tr *ngFor="let user of users">
-                  <td>{{user.id}}</td>
-                  <td>{{user.firstName}}</td>
-                  <td>{{user.lastName}}</td>
-                  <td>{{user.emailAddress}}</td>
-                  <td>{{user.phoneNumber}}</td>
-                  <td><button (click)="display(user);" class='button'><i class="fa fa-folder"></i> View</button>
-                    <td><button (click)="edit(user);" class='button'><i class="fa fa-pencil"></i> Edit</button>
+                <tr *ngFor="let role of roles">
+                  <td>{{role.id}}</td>
+                  <td>{{role.name}}</td>
+                  <td><button (click)="display(role);" class='button'><i class="fa fa-folder"></i> Open</button>
                   <button (click)="delete(role);" class='button'><i class="fa fa-trash-o"></i> Delete</button></td>
                 </tr>
   

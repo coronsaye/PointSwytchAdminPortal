@@ -1,3 +1,45 @@
-<p>
-  add-permission works!
-</p>
+<div class="animated fadeIn">
+
+    <div class="row">
+      <div class="col-lg-8 col-sm-12">
+          <div class="card">
+        
+              <div class="card-body">
+                  <div class="row">
+                      <div class="col-md-9">
+                              <h4 class="card-title">{{title}}</h4> 
+                              <h6 class="card-subtitle">This operation will create a new User Permission</h6>
+                      </div>
+                      <div class="col-md-3">
+                              <a style="float: right; color:white;" class="btn btn-info" > <i class="fa fa-list"></i> View Lists</a>
+                      </div>
+                  </div>
+                 
+                  <hr>
+                  <form #permissionForm="ngForm">
+                      <div [hidden]="permissionForm.submitted">
+                          <div class="form-group">
+                              <label for="name">Permission Name</label>
+                              <input id="name" name="name" class="form-control" required [(ngModel)]="permission.name" #name="ngModel">
+                              <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+                                  <div *ngIf="name.errors.required"> Permission Name is required. </div>
+                                   
+                              </div>
+                          </div>
+
+  
+                          <button type="submit" class="btn btn-danger" [disabled]="permissionForm.invalid">Submit</button>
+                          <button type="button" class="btn btn-primary" (click)="permissionForm.resetForm({})">Reset</button>
+                      </div>
+                      <div class="submitted-message" *ngIf="permissionForm.submitted">
+                          <p>You've created a permission object, {{permissionForm.value.name }}!</p>
+                          <button class="btn btn-primary" (click)="permissionForm.resetForm({})">Create New</button>
+                      </div>
+                  </form>
+              </div>
+          </div>
+         
+      </div>
+  </div>
+  </div>
+  

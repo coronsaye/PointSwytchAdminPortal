@@ -457,7 +457,7 @@ export const ROUTES: RouteInfo[] = [
       }
     ]
   }
-  ,{
+  , {
     path: '',
     title: 'ADMIN',
     icon: 'mdi mdi-dots-horizontal',
@@ -645,30 +645,12 @@ export const ROUTES: RouteInfo[] = [
         extralink: false,
         submenu: []
       }
-      ,
-      {
-        path: '/admin/edit-permission',
-        title: 'Edit Permission',
-        icon: 'icon icon-plus',
-        class: '',
-        extralink: false,
-        submenu: []
-      }
-      ,
-      {
-        path: '/admin/add-permission',
-        title: 'Delete Permission',
-        icon: 'icon icon-plus',
-        class: '',
-        extralink: false,
-        submenu: []
-      }
     ]
   }
   ,
   {
     path: '',
-    title: 'Users',
+    title: 'Manage Users',
     icon: 'icon icon-people',
     class: 'has-arrow',
     extralink: false,

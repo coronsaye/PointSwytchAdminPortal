@@ -1,0 +1,45 @@
+<div class="animated fadeIn">
+
+    <div class="row">
+      <div class="col-lg-8 col-sm-12">
+          <div class="card">
+        
+              <div class="card-body">
+                  <div class="row">
+                      <div class="col-md-9">
+                              <h4 class="card-title">{{title}}</h4> 
+                              <h6 class="card-subtitle">This operation will create a new User Role</h6>
+                      </div>
+                      <div class="col-md-3">
+                              <a style="float: right; color:white;" class="btn btn-info" > <i class="fa fa-list"></i> View Lists</a>
+                      </div>
+                  </div>
+                 
+                  <hr>
+                  <form #roleForm="ngForm">
+                      <div [hidden]="roleForm.submitted">
+                          <div class="form-group">
+                              <label for="name">Role Name</label>
+                              <input id="name" name="name" class="form-control" required [(ngModel)]="role.name" #name="ngModel">
+                              <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+                                  <div *ngIf="name.errors.required"> Name is required. </div>
+                                   
+                              </div>
+                          </div>
+
+  
+                          <button type="submit" class="btn btn-danger" [disabled]="roleForm.invalid">Submit</button>
+                          <button type="button" class="btn btn-primary" (click)="roleForm.resetForm({})">Reset</button>
+                      </div>
+                      <div class="submitted-message" *ngIf="roleForm.submitted">
+                          <p>You've created a role object, {{roleForm.value.name }}!</p>
+                          <button class="btn btn-primary" (click)="roleForm.resetForm({})">Create New</button>
+                      </div>
+                  </form>
+              </div>
+          </div>
+         
+      </div>
+  </div>
+  </div>
+  
