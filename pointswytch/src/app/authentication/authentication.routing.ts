@@ -3,6 +3,7 @@ import { Routes } from '@angular/router';
 import { NotfoundComponent } from './404/not-found.component';
 import { LockComponent } from './lock/lock.component';
 import { LoginComponent } from './login/login.component';
+import { Login2Component } from './login2/login2.component';
 
 
 
@@ -20,7 +21,7 @@ export const AuthenticationRoutes: Routes = [
       },
       {
         path: 'login',
-        component: LoginComponent
+        component: Login2Component
       }
     ]
   }

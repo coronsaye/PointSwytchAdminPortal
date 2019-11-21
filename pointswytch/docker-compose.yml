@@ -1,16 +1,19 @@
 version: '2'
 services:
   sandbox.web:
+    container_name: "pswytch_web_admin_sandbox"
     build:
       context: .
       args:
         env: sandbox
     ports:
-      - "8080:80"
+      - "8090:80"
   app.web:
+    container_name: "pswytch_web_admin"
+    image: "405997628000.dkr.ecr.eu-central-1.amazonaws.com/pointswytch-web:latest"
     build:
       context: .
       args:
         env: prod
     ports:
-      - "8081:80"
+      - "8091:80"

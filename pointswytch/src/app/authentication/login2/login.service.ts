@@ -26,7 +26,7 @@ export class LoginService {
     // Add new user group
     authenticate (data: Login): Observable<AccessToken>  {
       console.log('...validating login credentials');
-      return this.http.post<AccessToken>(this._baseUrl + '/users/login', data , httpOptions).pipe(
+      return this.http.post<AccessToken>(this._baseUrl + '/users/authenticate', data , httpOptions).pipe(
         tap((token: any) => console.log('Login session created with token ' + JSON.stringify(token)),
         catchError(error => of('error: ' + error))));
     }

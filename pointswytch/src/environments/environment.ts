@@ -13,5 +13,5 @@
 // import 'zone.js/dist/zone-error';  // Included with Angular CLI.
 export const environment = {
   production: false,
-  API_ENDPOINT: 'http://localhost:6050/api/v1'
+  API_ENDPOINT: 'http://35.158.69.239:8091/api/v1'
 };
