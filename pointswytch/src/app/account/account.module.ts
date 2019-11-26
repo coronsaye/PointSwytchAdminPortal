@@ -10,12 +10,12 @@ import { LoginComponent } from './login/login.component';
 import { Login2Component } from './login2/login2.component';
 
 
-import { AuthenticationRoutes } from './authentication.routing';
+import { AccountRoutes } from './account.routing';
 
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forChild(AuthenticationRoutes),
+    RouterModule.forChild(AccountRoutes),
     NgbModule
   ],
   declarations: [
@@ -26,4 +26,4 @@ import { AuthenticationRoutes } from './authentication.routing';
 
   ]
 })
-export class AuthenticationModule {}
+export class AccountModule {}

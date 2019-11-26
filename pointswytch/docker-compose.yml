@@ -16,4 +16,4 @@ services:
       args:
         env: prod
     ports:
-      - "8091:80"
+      - "8089:80"

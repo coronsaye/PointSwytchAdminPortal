@@ -6,7 +6,7 @@ import {
 } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { HttpClientModule, HttpClient, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { Routes, RouterModule } from '@angular/router';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -23,20 +23,31 @@ import { BreadcrumbComponent } from './shared/breadcrumb/breadcrumb.component';
 
 import { Approutes } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SpinnerComponent } from './shared/spinner.component';
+
 
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 
 import { JwtModule } from '@auth0/angular-jwt';
-import { AuthService } from './authentication/auth.service';
-import { AuthGuardService } from './authentication/auth-guard.service';
-import { LoginService } from './authentication/login2/login.service';
+import { AuthService } from './account/auth.service';
+import { AuthGuardService } from './account/auth-guard.service';
+import { LoginService } from './account/login2/login.service';
+
+import { Ng4LoadingSpinnerModule } from 'ng4-loading-spinner';
+
+import { LoaderComponent } from './shared/loader/loader.component';
+import { LoaderInterceptor } from './interceptors/loader.interceptor';
+import { LoaderService } from './services/loader.service';
+
+
+import {ToastrModule} from 'ngx-toastr';
+
 
 
 export function tokenGetter() {
-  return localStorage.getItem('access_token');
+  // tslint:disable-next-line:max-line-length
+  return localStorage.getItem('token');
 }
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true,
@@ -48,7 +59,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
 @NgModule({
   declarations: [
     AppComponent,
-    SpinnerComponent,
+    LoaderComponent,
     FullComponent,
     BlankComponent,
     NavigationComponent,
@@ -65,6 +76,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     HttpClientModule,
     NgbModule,
     HttpClientModule,
+    ToastrModule.forRoot(),
+    Ng4LoadingSpinnerModule.forRoot(),
     JwtModule.forRoot({
       config: {
         tokenGetter: tokenGetter,
@@ -83,7 +96,12 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     {
       provide: PERFECT_SCROLLBAR_CONFIG,
       useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG
-    }, AuthService, AuthGuardService, LoginService
+    },
+     AuthService,
+     AuthGuardService,
+     LoginService,
+     LoaderService,
+     { provide: HTTP_INTERCEPTORS, useClass: LoaderInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]
 })

@@ -1,5 +1,5 @@
 import { TestBed } from '@angular/core/testing';
-import { RoleGuardService } from '../authentication/role-guard.service';
+import { RoleGuardService } from '../account/role-guard.service';
 
 
 describe('RoleGuardService', () => {

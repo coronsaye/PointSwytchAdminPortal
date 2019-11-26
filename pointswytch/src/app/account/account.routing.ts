@@ -7,7 +7,7 @@ import { Login2Component } from './login2/login2.component';
 
 
 
-export const AuthenticationRoutes: Routes = [
+export const AccountRoutes: Routes = [
   {
     path: '',
     children: [

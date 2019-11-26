@@ -11,10 +11,10 @@ export const DashboardRoutes: Routes = [
         path: 'admin',
         component: Dashboard1Component,
         data: {
-          title: 'Admin Dashboard',
+          title: 'Main Dashboard',
           urls: [
             { title: 'Dashboard', url: '/dashboard' },
-            { title: 'Admin Dashboard' }
+            { title: 'Main Dashboard' }
           ]
         }
       },

@@ -4,7 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { FullComponent } from './layouts/full/full.component';
 import { BlankComponent } from './layouts/blank/blank.component';
 
-import { AuthGuardService as AuthGuard, AuthGuardService} from './authentication/auth-guard.service';
+import { AuthGuardService as AuthGuard} from './account/auth-guard.service';
 
 export const Approutes: Routes = [
   {
@@ -18,9 +18,9 @@ export const Approutes: Routes = [
           './onboarding/onboarding.module#OnboardingModule'
       },
       {
-        path: 'authentication',
+        path: 'account',
         loadChildren:
-          './authentication/authentication.module#AuthenticationModule'
+          './account/account.module#AccountModule'
       },
 
       {
@@ -59,6 +59,6 @@ export const Approutes: Routes = [
   },
   {
     path: '**',
-    redirectTo: '/authentication/404'
+    redirectTo: '/account/404'
   }
 ];
